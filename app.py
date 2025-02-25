@@ -23,7 +23,7 @@ search = DuckDuckGoSearchRun(name="Search")
 
 # Google News API Wrapper
 def google_news_search(query: str) -> str:
-    api_key = os.getenv("NEWS_API_KEY")
+    api_key = st.secrets['NEWS_API_KEY']
     url = f"https://newsapi.org/v2/everything?q={query}&apiKey={api_key}&pageSize=3"
     response = requests.get(url)
     if response.status_code == 200:
@@ -76,7 +76,7 @@ if prompt := st.chat_input(placeholder="Ask me anything..."):
     )
 
     # Determine if the query needs tools or reasoning
-    keywords = ["search", "find", "news", "wikipedia", "arxiv", "today"]
+    keywords = ["search", "find", "news", "wikipedia", "arxiv", "today", "current"]
     if any(kw in prompt.lower() for kw in keywords):
         # Use tools for search-based queries
         with st.chat_message("assistant"):
