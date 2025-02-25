@@ -76,7 +76,7 @@ if prompt := st.chat_input(placeholder="Ask me anything..."):
     )
 
     # Determine if the query needs tools or reasoning
-    keywords = ["search", "find", "news", "wikipedia", "arxiv", "today", "current"]
+    keywords = ["search", "find", "news", "wikipedia", "arxiv", "today", "current", "who", "how"]
     if any(kw in prompt.lower() for kw in keywords):
         # Use tools for search-based queries
         with st.chat_message("assistant"):
