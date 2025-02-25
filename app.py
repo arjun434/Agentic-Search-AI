@@ -44,7 +44,7 @@ st.title("🔎 LangChain - Chat with Search & Reasoning")
 
 # Sidebar for Settings
 st.sidebar.title("Settings")
-api_key = st.sidebar.text_input("Enter your Groq API Key:", type="password")
+api_key = st.sidebar.text_input("Enter your Groq API Key:",value=st.secrets['GROQ_API_KEY'], type="password")
 
 # Initialize Session State for Messages and Chat History
 if "session_histories" not in st.session_state:
