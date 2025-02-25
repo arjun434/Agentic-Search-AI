@@ -40,7 +40,7 @@ google_news_tool = Tool(
 )
 
 # Streamlit App Title
-st.title("🔎 LangChain - Enhanced Chat with Search & Reasoning")
+st.title("🔎 LangChain - Chat with Search & Reasoning")
 
 # Sidebar for Settings
 st.sidebar.title("Settings")
